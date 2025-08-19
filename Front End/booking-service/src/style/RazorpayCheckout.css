@@ -1,0 +1,87 @@
+/* Minimal Centered Payment Form */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+.payment-box {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.payment-details p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.payment-button {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  background-color: #3399cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.payment-button:hover {
+  background-color: #287fa7;
+}
+
+.payment-button.processing {
+  background-color: #999;
+  cursor: wait;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.payment-security {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.success-message {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.error-state {
+  text-align: center;
+  padding: 2rem;
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.error-message {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}

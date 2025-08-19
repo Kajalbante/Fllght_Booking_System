@@ -1,0 +1,159 @@
+/* Flight List Container */
+.flight-list-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styles */
+.flight-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.flight-list-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Button Styles */
+.action-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-button {
+  background-color: #4361ee;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #3a56d4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(67, 97, 238, 0.3);
+}
+
+/* Table Styles */
+.flights-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 2rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #e0e0e0;
+}
+
+.flights-table thead {
+  background-color: #4361ee;
+  color: white;
+}
+
+.flights-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.flights-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: white;
+}
+
+.flights-table tr:last-child td {
+  border-bottom: none;
+}
+
+.flights-table tr:hover td {
+  background-color: #f8f9fa;
+}
+
+/* Action Buttons */
+.action-cell {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.update-button {
+  background-color: #4895ef;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.update-button:hover {
+  background-color: #3a7bc8;
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  background-color: #f72585;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #d91a6d;
+  transform: translateY(-1px);
+}
+
+/* Loading State */
+.loading-state {
+  text-align: center;
+  padding: 2rem;
+  color: #4361ee;
+  font-size: 1.2rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flight-list-container {
+    padding: 1rem;
+  }
+  
+  .flights-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .action-cell {
+    flex-direction: column;
+  }
+  
+  .flight-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
