@@ -1,0 +1,24 @@
+-- CREATE DATABASE pricing_db;
+-- drop DATABASE pricing_db;
+USE pricing_db; select * from fare;
+  
+-- USE pricing_db;
+-- DROP TABLE IF EXISTS fare;
+
+--   CREATE TABLE fare (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+--     airline VARCHAR(100) NOT NULL,
+--     source VARCHAR(100) NOT NULL,
+--      destination VARCHAR(100) NOT NULL,
+--     base_price DOUBLE NOT NULL,
+--     taxes DOUBLE NOT NULL,
+--     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+--  );
+
+-- -- Sample Pricing Data
+  -- INSERT INTO fare (airline, source, destination, base_price, taxes) VALUES
+--  ('IndiGo', 'Mumbai', 'Delhi', 4500, 500),
+--  ('Air India', 'Delhi', 'Bangalore', 6000, 650),
+-- ('SpiceJet', 'Chennai', 'Kolkata', 4000, 400),
+--  ('Vistara', 'Hyderabad', 'Pune', 3500, 300),
+--  ('GoAir', 'Ahmedabad', 'Jaipur', 3200, 280);

@@ -1,0 +1,24 @@
+CREATE DATABASE IF NOT EXISTS search_flight;
+
+USE search_flight ;  
+-- SELECT * FROM flights;
+-- DROP TABLE IF EXISTS flights;
+
+ CREATE TABLE flights (
+   id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    airline VARCHAR(100) NOT NULL,
+     source VARCHAR(100) NOT NULL,
+     destination VARCHAR(100) NOT NULL,
+    departure_date DATETIME NOT NULL,
+     available_seats INT NOT NULL CHECK (available_seats >= 0),
+     total_seats INT NOT NULL CHECK (total_seats > 0),
+     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+ );
+
+-- -- Sample Flight Data
+ INSERT INTO flights (airline, source, destination, departure_date, available_seats, total_seats) VALUES
+('IndiGo', 'Mumbai', 'Delhi', '2025-06-15 08:30:00', 50, 60),
+ ('Air India', 'Delhi', 'Bangalore', '2025-06-16 10:00:00', 30, 50),
+('SpiceJet', 'Chennai', 'Kolkata', '2025-06-20 09:45:00', 25, 40),
+ ('Vistara', 'Hyderabad', 'Pune', '2025-06-18 12:00:00', 20, 30),
+ ('GoAir', 'Ahmedabad', 'Jaipur', '2025-06-22 07:15:00', 18, 25);

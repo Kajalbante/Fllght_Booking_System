@@ -1,0 +1,29 @@
+-- CREATE DATABASE booking_db;
+USE booking_db;
+select * from booking;
+--  DROP TABLE IF EXISTS booking;
+
+CREATE TABLE booking (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+   user_id BIGINT NOT NULL,
+     airline VARCHAR(100) NOT NULL,
+     source VARCHAR(100) NOT NULL,
+     destination VARCHAR(100) NOT NULL,
+    departure_date DATETIME NOT NULL,
+    base_price DOUBLE NOT NULL,
+     taxes DOUBLE NOT NULL,
+    total_fare DOUBLE NOT NULL,
+    passenger_name VARCHAR(255) NOT NULL,
+    passenger_email VARCHAR(255) NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    booking_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    last_modified DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+--  Sample Booking Data (based on flights and pricing info)
+INSERT INTO booking (user_id, airline, source, destination, departure_date, base_price, taxes, total_fare, passenger_name, passenger_email, status) VALUES
+ (101, 'IndiGo', 'Mumbai', 'Delhi', '2025-06-15 08:30:00', 4500, 500, 5000, 'Amit Kumar', 'amit@example.com', 'CONFIRMED'),
+ (102, 'Air India', 'Delhi', 'Bangalore', '2025-06-16 10:00:00', 6000, 650, 6650, 'Riya Sharma', 'riya@example.com', 'CONFIRMED'),
+ (103, 'SpiceJet', 'Chennai', 'Kolkata', '2025-06-20 09:45:00', 4000, 400, 4400, 'Rahul Sen', 'rahul@example.com', 'CONFIRMED'),
+ (104, 'Vistara', 'Hyderabad', 'Pune', '2025-06-18 12:00:00', 3500, 300, 3800, 'Neha Rao', 'neha@example.com', 'CONFIRMED'),
+ (105, 'GoAir', 'Ahmedabad', 'Jaipur', '2025-06-22 07:15:00', 3200, 280, 3480, 'Manish Jain', 'manish@example.com', 'CONFIRMED');
